@@ -36,7 +36,7 @@ A modern, responsive educational web application created using **HTML**, **CSS**
 
 ## 📸 Screenshots
 
-![EduApplication Preview](assets/screenshots/homepage.png)  
+![EduApplication Preview](https://github.com/kashish1326/EduApplication/tree/main/screenshots)  
 > Homepage with interactive layout and course visuals.
 
 ## 📌 How to Run
