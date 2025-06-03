@@ -40,6 +40,15 @@ A modern, responsive educational web application created using **HTML**, **CSS**
 
 
 
+---
+
+### 🔄 Optional Suggestions:
+- Add a real screenshot to the `assets/screenshots/` folder and link it.
+- Publish the project using **GitHub Pages**, **Netlify**, or **Vercel** for the live preview link.
+- Add the other group members’ names (if needed) under **Authors**.
+
+Let me know if you want a deployment guide too!
+
 
 ## 📌 How to Run
 
