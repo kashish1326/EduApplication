@@ -1,0 +1,540 @@
+/*-----------------------------------*\
+  #style.css
+\*-----------------------------------*/
+
+  
+  /*-----------------------------------*\
+    #RESET
+  \*-----------------------------------*/
+
+
+:root {
+  /**
+  colors
+  */
+  
+  --rich-black-fogra-29: hsl(225, 25%, 9%);
+  --rich-black-fogra-39: hsl(170, 21%, 5%);
+  --raisin-black: hsl(228, 13%, 15%);
+  --eerie-black: hsl(207, 19%, 11%);
+  --light-gray: hsl(0, 3%, 80%);
+  --gunmetal-1: hsl(229, 15%, 21%);
+  --gunmetal-2: hsl(216, 22%, 18%);
+  --gainsboro: hsl(0, 7%, 88%);
+  --citrine: hsl(57, 97%, 45%);
+  --xiketic: hsl(253, 21%, 13%);
+  --gray-x: hsl(0, 0%, 74%);
+  --white: hsl(0, 100%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --jet: hsl(0, 0%, 20%);
+
+  --white: hsl(0, 100%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --pink: lightpink;
+    --blue: lightblue;
+    --red: crimson;
+  
+  /**  Gradient color*/
+  --gradient:linear-gradient(-90deg, rgba(255, 255, 255, 0) 25%, transparent,hsl(170, 75%, 41%)100%) ;
+  /**
+  typography
+  */
+  
+  --ff-poppins: 'Poppins', sans-serif;
+  
+  /** Font Size  */
+  --fs-1: 36px;
+  --fs-2: 32px;
+  --fs-3: 30px;
+  --fs-4: 24px;
+  --fs-5: 20px;
+  --fs-6: 18px;
+  --fs-7: 16px;
+  --fs-8: 15px;
+  --fs-9: 14px;
+  --fs-10: 13px;
+  --fs-11: 12px;
+  --fs-12: 11px;
+  
+  /** Font Weight  */
+  --fw-500: 500;
+  --fw-700: 700;
+  
+  /**
+  spacing
+  */
+  
+  --section-padding: 100px;
+  
+  /**
+  Transition
+  */
+  --transition-1: 0.15s ease;
+  --transition-2: 0.25s ease-in;
+  
+  /** Radius */
+  
+  --radius-pill: 500px;
+  --radius-circle: 50%;
+  --radius-1: 10px;
+  }
+  
+  
+  /*-----------------------------------*\
+   Body: 
+  \*-----------------------------------*/
+  
+body {
+    
+      margin: 0;
+      background-color:rgb(199, 172, 252);
+      display: grid;
+    
+}
+ /*-----------------------------------*\
+    #Image
+  \*-----------------------------------*/
+  .ImageSlider { 
+    display: grid;
+    transform: translate(0, 0);
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%; /* Ensures the slider container spans the full width of the viewport */
+    height: auto; /* Adjusts the height dynamically */
+    padding: 0; /* Optional: Remove padding for cleaner scaling */
+    background-size: cover;
+  }
+  
+  .ImageSlider img {
+    width: 100%; /* Makes the image width 100% of its container */
+    height: auto; /* Maintains the image's aspect ratio */
+    object-fit: cover; /* Ensures the image covers the container */
+  }
+
+  
+  /*-----------------------------------*\
+    #Navigation bar styles: 
+  \*------*/
+
+  header{
+    background-color:#111111;
+    padding: 1em;
+    text-align: center;
+  
+}
+  
+.logo {
+  /* Light background color */
+    display: flex;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: inline-block;
+   padding-right: 450px;
+   padding-bottom: 20px;
+}
+  
+.logo img {
+  float:inline-start;
+  width: 65%; 
+  max-width: 240px; /* Limit the logo size */
+  margin-left: 5%;
+  padding-bottom: 25px;
+}
+  
+  
+.toggle{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 45px;
+    margin-right: 5%;
+    cursor: pointer;
+    display: none;
+}
+  
+nav {
+    align-items: center;
+    background-color: #111111;
+    padding: 15px 25px;
+    height: 90px;
+}
+ul{
+    float: right;
+    margin-right: 5%;
+}
+  
+ul li{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: inline-block;
+}
+ul li a{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 45px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px;
+}
+  
+ul li:first-child{
+    background-color: blueviolet;
+}
+  
+ul li:hover{
+    background-color: blueviolet;
+    color: #fff;
+}
+  
+@media screen and (max-width:1052px) {
+    .toggle{
+      display: block;
+    }
+    ul{
+      position: fixed;
+      top: -400px;
+      z-index: -1;
+      margin-top: -15px;
+      right: 0;
+      left:0;
+      width: 200px;
+      background-color: #202020;
+      display: inline-block;
+      transition:top .4s;
+      margin-right: 0;
+     }
+     ul.show{
+      top: 60px;
+     }
+     ul li{
+      top:0;
+      width: 100%;
+      float: right;
+      text-align: center;
+     }
+     
+}
+@media screen and (max-width:800px){
+    ul{
+      width: 100%;
+    }
+}
+/*-----------------------------------*\
+    Testimonials Cards
+\*-----------------------------------*/
+
+
+/* Testimonial Section */
+.testimonials {
+  background-color:rgb(199, 172, 252);
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #000000;
+}
+
+.testimonials p {
+  color: #bbb;
+  margin-bottom: 2rem;
+}
+
+.testimonial-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  padding: 2rem;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: rgb(6, 186, 252);
+
+}
+
+.card .location {
+  font-size: 0.9rem;
+  color: #49f5c1;
+  margin-bottom: 1rem;
+}
+
+.card .quote {
+  font-size: 0.9rem;
+  color: #ddd;
+  line-height: 1.4;
+}
+
+  
+  
+  
+  
+  /*-----------------------------------*\
+    Explore Section 
+
+  \*-----------------------------------*/
+body {
+  font-family: Arial, sans-serif;
+  background-color:rgb(199, 172, 252);
+  color:black;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Explore Section */
+.explore {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.explore h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.category {
+  background-color: #1a1a1a;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.category img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.category p {
+  font-size: 1rem;
+  font-weight: bold;
+  color:rgb(235, 19, 170);
+}
+
+.category span {
+  font-size: 0.9rem;
+  color: #edecec;
+}
+
+
+
+
+
+ /*-----------------------------------*\
+    Learner Outcomes Section
+  \*-----------------------------------*/
+
+.learner-outcomes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  background-color: #202020;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+
+.images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Adjust the grid to have three equal columns */
+  gap: 1rem;
+}
+
+.images img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Target the specific image to span two columns */
+.images img:nth-child(2) {
+  grid-column: span 2; /* Makes the second image span across two columns */
+}
+
+
+
+.text-content {
+  text-align: left;
+}
+
+.text-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: rgb(6, 186, 252);
+}
+
+.text-content p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+  color: #bbb;
+}
+
+.text-content a {
+  color: #4caf50;
+  text-decoration: none;
+}
+
+.text-content button {
+  padding: 0.8rem 1.5rem;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.text-content button:hover {
+  background-color: #4898b5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .learner-outcomes {
+      grid-template-columns: 1fr;
+  }
+
+  .images {
+      grid-template-columns: 1fr;
+  }
+}
+
+  
+  
+  
+  
+  /*-----------------------------------*\
+    Partners or Company 
+  \*-----------------------------------*/
+
+.partners {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: rgb(199, 172, 252);
+  border-bottom: 1px solid #333;
+}
+
+.partners p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.logos img {
+  width: 80px;
+  height: auto;
+}
+  
+  /*-----------------------------------*\
+    #FOOTER
+  \*-----------------------------------*/
+  
+  .footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #111111;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    box-sizing: border-box;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows icons to wrap on smaller screens */
+    gap: 15px;
+    margin-top: 15px;
+  }
+  
+  .fa-brands {
+    padding: 10px;
+    font-size: 24px; /* Adjusted size for better visual impact */
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff; /* Default icon color */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+  }
+  
+  .fa-brands:hover {
+    color: #04b8ff; /* Icon color on hover (e.g., bright orange) */
+    background-color: rgba(255, 87, 34, 0.2); /* Background color change on hover */
+  }
+  
+  .footer p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ffffff;
+    word-wrap: break-word; /* Ensures the text wraps properly */
+  }
+  
+  /* Media Query for Mobile */
+  @media (max-width: 768px) {
+    .social-icons {
+      gap: 10px; /* Reduce gap between icons */
+    }
+  
+    .fa-brands {
+      font-size: 20px; /* Smaller icons for mobile */
+      width: 35px;
+      height: 35px;
+    }
+  
+    .footer p {
+      font-size: 12px; /* Adjust footer text size for readability */
+    }
+  }
+  

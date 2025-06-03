@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="/E_Website/css/video.css">
+  
+  <title>
+    BitLearn Gen PPT Section
+</title>
+<meta name="title" content="Education APP">
+<meta name="description" content=" This is an Educational App you can learn new tech with projects.. etc..">
+
+         <!--Favicon -- for logo you show in tab -->
+<link rel="icon" type="image/x-icon" href="/E_Website/assets/logo.png">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+          <img src="/E_Website/assets/logo.png" alt="BitLearn Gen Logo">
+      </div>
+  
+      <label class="toggle">
+          <i class="fa-solid fa-bars" ></i>
+      </label>     
+        <ul>
+            <li> <a href= "home.html"><i class="fa-solid fa-house"></i> Home </a> </li>
+            <li> <a href= "video.html" target="_blank">Free Resources </a> </li>
+            <li> <a href= "Course.html" target="_blank">Courses </a> </li> 
+            <li> <a href= "quiz.html" target="_blank" >Quiz </a> </li>
+            <li> <a href= "about.html">About US </a> </li>
+        </ul>
+    </nav>
+  </header>
+
+  <!-- Section for PPTs -->
+  <section id="ppt-section">
+    <h2>PPT Presentations</h2>
+    <div class="media-container">
+      
+
+      <div class="ppt">
+        <img src="/E_Website/assets/cpp.jpeg" alt="PPT Thumbnail" class="thumbnail" onclick="openPPT('https://cds.iisc.ac.in/wp-content/uploads/DS286.AUG2016.Lab2_.cpp_tutorial.pdf')">
+        <div class="controls">
+          <i class="fas fa-expand control-icon" title="View PPT Fullscreen" onclick="openPPT('https://cds.iisc.ac.in/wp-content/uploads/DS286.AUG2016.Lab2_.cpp_tutorial.pdf')"></i>
+        </div>
+      </div>
+      <div class="ppt">
+        <img src="/E_Website/assets/html.jpeg" alt="HTML PPT Thumbnail" class="thumbnail" onclick="openPPT('https://www.slideshare.net/slideshow/html-47374358/47374358')">
+        <div class="controls">
+          <i class="fas fa-expand control-icon" title="View PPT Fullscreen" onclick="openPPT('https://www.slideshare.net/slideshow/html-47374358/47374358')"></i>
+        </div>
+      </div>
+
+      <div class="ppt">
+        <img src="/E_Website/assets/jsy.jpeg" alt="PPT Thumbnail" class="thumbnail" onclick="openPPT('https://www.tutorialspoint.com/javascript/javascript_tutorial.pdf')">
+        <div class="controls">
+          <i class="fas fa-expand control-icon" title="View PPT Fullscreen" onclick="openPPT('https://www.tutorialspoint.com/javascript/javascript_tutorial.pdf')"></i>
+        </div>
+      </div>
+
+      <div class="ppt">
+        <img src="/E_Website/assets/css.jpeg" alt="CSS PPT Thumbnail" class="thumbnail" onclick="openPPT('https://www.slideshare.net/slideshow/cascading-style-sheet-css-49127243/49127243')">
+        <div class="controls">
+          <i class="fas fa-expand control-icon" title="View PPT Fullscreen" onclick="openPPT('https://www.slideshare.net/slideshow/cascading-style-sheet-css-49127243/49127243')"></i>
+        </div>
+      </div>
+
+      <div class="ppt">
+        <img src="/E_Website/assets/pyhton.jpeg" alt="Python PPT Thumbnail" class="thumbnail" onclick="openPPT('https://bugs.python.org/file47781/Tutorial_EDIT.pdf')">
+        <div class="controls">
+          <i class="fas fa-expand control-icon" title="View PPT Fullscreen" onclick="openPPT('https://bugs.python.org/file47781/Tutorial_EDIT.pdf')"></i>
+        </div>
+      </div>
+      <div class="ppt">
+        <img src="/E_Website/assets/php.jpeg" alt="HTML PPT Thumbnail" class="thumbnail" onclick="openPPT('https://www.slideshare.net/slideshow/html-47374358/47374358')">
+        <div class="controls">
+          <i class="fas fa-expand control-icon" title="View PPT Fullscreen" onclick="openPPT('https://www.slideshare.net/slideshow/html-47374358/47374358')"></i>
+        </div>
+      </div>
+
+      <div class="ppt">
+        <img src="/E_Website/assets/DSA.jpeg" alt="PPT Thumbnail" class="thumbnail" onclick="openPPT('https://www.tutorialspoint.com/javascript/javascript_tutorial.pdf')">
+        <div class="controls">
+          <i class="fas fa-expand control-icon" title="View PPT Fullscreen" onclick="openPPT('https://www.tutorialspoint.com/javascript/javascript_tutorial.pdf')"></i>
+        </div>
+      </div>
+
+      <div class="ppt">
+        <img src="/E_Website/assets/AI.jpeg" alt="CSS PPT Thumbnail" class="thumbnail" onclick="openPPT('https://www.slideshare.net/slideshow/cascading-style-sheet-css-49127243/49127243')">
+        <div class="controls">
+          <i class="fas fa-expand control-icon" title="View PPT Fullscreen" onclick="openPPT('https://www.slideshare.net/slideshow/cascading-style-sheet-css-49127243/49127243')"></i>
+        </div>
+      </div>
+
+      <div class="ppt">
+        <img src="/E_Website/assets/grna2.jpeg" alt="Python PPT Thumbnail" class="thumbnail" onclick="openPPT('https://bugs.python.org/file47781/Tutorial_EDIT.pdf')">
+        <div class="controls">
+          <i class="fas fa-expand control-icon" title="View PPT Fullscreen" onclick="openPPT('https://bugs.python.org/file47781/Tutorial_EDIT.pdf')"></i>
+        </div>
+      </div> 
+    </div>
+    <a href="ppts.html" class="see-more-btn">See More</a>
+  </section>
+
+
+
+  <!-- Modal for Fullscreen Content -->
+  <div id="modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <iframe id="modal-content" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <script src="/E_Website/JavaScript/video.js"></script>
+</body>
+</html>

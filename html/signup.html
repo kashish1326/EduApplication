@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>
+        Signup Form
+</title>
+<meta name="title" content="Education APP">
+<meta name="description" content=" This is an Educational App you can learn new tech with projects.. etc..">
+
+             <!--Favicon -- for logo you show in tab -->
+<link rel="icon" type="image/x-icon" href="/E_Website/assets/logo.png">
+    <link rel="stylesheet" href="/E_Website/css/signup.css">
+</head>
+<body>
+   <div class="outer-box">
+    <div class="inner-box">
+<header class="signup-header">
+        <h1>Sign Up</h1>
+        <p>Join Us for This adventurous journey!</p>
+    <main class="signup-body">
+        <form id="signupForm">
+        <p>
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" placeholder="Enter your Name " required>
+        </p>
+        <p>
+            <label for="email">Your Email-Id</label>
+            <input type="email" id="email" placeholder="enter Your Email" required>
+        </p>
+        <p>
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="At Least 8 Characters" required>
+        </p>
+        <p>
+            <input type="submit" id="submit" value="Create Account">
+        </p>
+    </form>
+    </main>
+</header>
+    <footer class="signup-footer">
+        <p>Already Have An Account? <a href="login.html">Login</a></p>
+    </footer>
+    </div>
+</div>
+
+
+
+
+<!-- Java Script to redirect to landing page-->   
+<script>
+    document.getElementById('signupForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        
+        // Perform any additional validation or processing here if needed
+
+        // Redirect to another page
+        window.location.href = `home.html`; // Change "welcome.html" to your desired page
+    });
+
+
+</script>
+ 
+  
+</body>
+</html>

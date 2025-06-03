@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>
+    Quiz Test
+</title>
+<meta name="title" content="Education APP">
+<meta name="description" content=" This is an Educational App you can learn new tech with projects.. etc..">
+
+         <!--Favicon -- for logo you show in tab -->
+<link rel="icon" type="image/x-icon" href="/E_Website/assets/logo.png">
+  <link rel="stylesheet" href="/E_Website/css/quiz.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">
+          <img src="/E_Website/assets/logo.png" alt="BitLearn Gen Logo">
+      </div>
+  
+      <label class="toggle">
+          <i class="fa-solid fa-bars" ></i>
+      </label>     
+        <ul>
+            <li> <a href= "home.html"><i class="fa-solid fa-house"></i> Home </a> </li>
+            <li> <a href= "video.html" target="_blank">Free Resources </a> </li>
+            <li> <a href= "Course.html" target="_blank">Courses </a> </li> 
+            <li> <a href= "quiz.html" target="_blank" >Quiz </a> </li>
+            <li> <a href= "about.html">About US </a> </li>
+        </ul>
+    </nav>
+  </header>
+
+  <div id="homepage">
+    <h1>Welcome to the Quiz Zone</h1>
+    <p>Select a subject to test your knowledge!</p>
+    <div class="subjects">
+      <!-- Subject Cards -->
+      <div class="subject">
+        <img src="/E_Website/assets/html.jpeg" alt="HTML" />
+        <h2>HTML</h2>
+        <button onclick="startQuiz('HTML')">Take Quiz</button>
+      </div>
+      <div class="subject">
+        <img src="/E_Website/assets/css.jpeg" alt="CSS" />
+        <h2>CSS</h2>
+        <button onclick="startQuiz('CSS')">Take Quiz</button>
+      </div>
+      <div class="subject">
+        <img src="/E_Website/assets/jsy.jpeg" alt="JavaScript" />
+        <h2>JavaScript</h2>
+        <button onclick="startQuiz('JavaScript')">Take Quiz</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="quizpage" style="display: none;">
+    <h1 id="quiz-title"></h1>
+    <div id="questions"></div>
+    <button id="submit-btn" onclick="submitQuiz()">Submit Quiz</button>
+  </div>
+
+  <div id="resultpage" style="display: none;">
+    <h1>Quiz Result</h1>
+    <p id="result"></p>
+    <button onclick="generateCertificate()">Generate Certificate</button>
+  </div>
+
+  <div id="certificatepage" style="display: none;">
+    <h1>Certificate Generator</h1>
+    <form id="certificate-form" onsubmit="createCertificate(event)">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required />
+      <label for="details">Last Name:</label>
+      <input type="text" id="details" required />
+      <button type="submit">Generate Certificate</button>
+    </form>
+    <div id="certificate" style="display: none;">
+      <h1>Certificate of Achievement</h1>
+      <p id="cert-name"></p>
+      <p id="cert-subject"></p>
+    </div>
+  </div>
+
+  <script src="/E_Website/JavaScript/quiz.js"></script>
+</body>
+</html>

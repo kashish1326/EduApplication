@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>
+       Login Page
+</title>
+<meta name="title" content="Education APP">
+<meta name="description" content=" This is an Educational App you can learn new tech with projects.. etc..">
+
+             <!--Favicon -- for logo you show in tab -->
+<link rel="icon" type="image/x-icon" href="/E_Website/assets/logo.png">
+    <link rel="stylesheet" href="/E_Website/css/signup.css">
+</head>
+<body>
+   <div class="outer-box">
+    <div class="inner-box">
+<header class="signup-header">
+        <h1>SIGN IN</h1>
+       
+    <main class="signup-body">
+        <form id="LoginForm">
+        <p>
+            <label for="usename">username</label>
+            <input type="text" id="fullname" placeholder="enter your username" >
+        </p>
+       
+        <p>
+            <label for="password">Password</label>
+            <input type="text" id="password" placeholder="At Least 8 Character" >
+        </p>
+        <p>
+            <input type="submit" id="submit" value="login">
+        </p>
+    </form>
+    </main>
+</header>
+    <footer class="signup-footer">  
+        <p>Don't Have An Account? <a href="signup.html">Signup</a></p>
+        <p>Forgot password <a href="#">Forgot</a></p>
+    </footer>
+
+    <!-- Java Script-->   
+<script>
+    document.getElementById('LoginForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        
+        // Perform any additional validation or processing here if needed
+
+        // Redirect to another page
+        window.location.href = `home.html`; 
+    });
+
+
+</script>
+
+ 
+</body>
+</html>

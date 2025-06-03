@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>
+Enroll page
+</title>
+<meta name="title" content="Education APP">
+<meta name="description" content=" This is an Educational App you can learn new tech with projects.. etc..">
+
+         <!--Favicon -- for logo you show in tab -->
+<link rel="icon" type="image/x-icon" href="/E_Website/assets/logo.png">
+  <link rel="stylesheet" href="/E_Website/css/enroll.css">
+</head>
+<body>
+  
+  <div class="container">
+    <h1>Enroll Now</h1>
+    <form id="signupForm">
+      <div class="input-group">
+        <label for="name">Name</label>
+        <input type="text" id="username" placeholder="Enter your Name" required>
+      </div>
+      <div class="input-group">
+        <label for="phone">Phone No</label>
+        <input type="text" id="Phone" placeholder="Enter your Phone Number" required>
+      </div>
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="At Least 8 Character" required>
+        </p>>
+      </div>
+      <div class="input-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+      </div>
+      <button type="button" class="signup-btn" onclick="validateForm()">Submit</button>
+    </form>
+  </div>
+  <script src="/E_Website/JavaScript/enroll.js"></script>
+</body>
+</html>

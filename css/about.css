@@ -1,0 +1,257 @@
+header{
+  background-color:#111111;
+  padding: 1em;
+  text-align: center;
+
+}
+
+.logo {
+/* Light background color */
+  display: flex;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: inline-block;
+ padding-right: 450px;
+ padding-bottom: 20px;
+}
+
+.logo img {
+float:inline-start;
+width: 65%; 
+max-width: 240px; /* Limit the logo size */
+margin-left: 5%;
+padding-bottom: 25px;
+}
+
+
+.toggle{
+  font-size: 30px;
+  color: #fff;
+  float: right;
+  line-height: 45px;
+  margin-right: 5%;
+  cursor: pointer;
+  display: none;
+}
+
+nav {
+  align-items: center;
+  background-color: #111111;
+  padding: 15px 25px;
+  height: 90px;
+}
+ul{
+  float: right;
+  margin-right: 5%;
+}
+
+ul li{
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: inline-block;
+}
+ul li a{
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 45px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 15px;
+}
+
+ul li:first-child{
+  background-color: blueviolet;
+}
+
+ul li:hover{
+  background-color: blueviolet;
+  color: #fff;
+}
+
+@media screen and (max-width:1052px) {
+  .toggle{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    top: -400px;
+    z-index: -1;
+    margin-top: -15px;
+    right: 0;
+    left:0;
+    width: 200px;
+    background-color: #202020;
+    display: inline-block;
+    transition:top .4s;
+    margin-right: 0;
+   }
+   ul.show{
+    top: 60px;
+   }
+   ul li{
+    top:0;
+    width: 100%;
+    float: right;
+    text-align: center;
+   }
+   
+}
+@media screen and (max-width:800px){
+  ul{
+    width: 100%;
+  }
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:rgb(224, 198, 248);
+    color: #fff;
+  }
+  
+  .about-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .about-container h1 {
+    margin-bottom: 10px;
+    color:#000000;
+  }
+  
+  .about-container p {
+    margin-bottom: 30px;
+    color: #000000;
+  }
+  
+  .team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .card {
+    background-color:  rgba(52, 51, 53, 0.5);
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(103, 8, 245, 0.456);
+    width: 400px; /* Increased width for rectangular shape */
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .profile-pic img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  .details h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+    color: #fff;
+  }
+  
+  .details p {
+    font-size: 14px;
+    color: #bbb;
+    margin: 5px 0;
+  }
+  
+  .social-icons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .social-icons a img {
+    width: 24px; /* Adjust icon size */
+    height: 24px;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icons a img:hover {
+    transform: scale(1.2);
+  }
+  
+/*-----------------------------------*\
+    #FOOTER
+ \*-----------------------------------*/
+  
+  .footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #111111;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    box-sizing: border-box;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows icons to wrap on smaller screens */
+    gap: 15px;
+    margin-top: 15px;
+  }
+  
+  .fa-brands {
+    padding: 10px;
+    font-size: 24px; /* Adjusted size for better visual impact */
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff; /* Default icon color */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+  }
+  
+  .fa-brands:hover {
+    color: #04b8ff; /* Icon color on hover (e.g., bright orange) */
+    background-color: rgba(255, 87, 34, 0.2); /* Background color change on hover */
+  }
+  
+  .footer p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ffffff;
+    word-wrap: break-word; /* Ensures the text wraps properly */
+  }
+  
+  /* Media Query for Mobile */
+  @media (max-width: 768px) {
+    .social-icons {
+      gap: 10px; /* Reduce gap between icons */
+    }
+  
+    .fa-brands {
+      font-size: 20px; /* Smaller icons for mobile */
+      width: 35px;
+      height: 35px;
+    }
+  
+    .footer p {
+      font-size: 12px; /* Adjust footer text size for readability */
+    }
+  }
+  

@@ -1,0 +1,551 @@
+/*-----------------------------------*\
+  #style.css
+\*-----------------------------------*/
+
+  
+  /*-----------------------------------*\
+    #RESET
+  \*-----------------------------------*/
+
+
+  :root {
+    /**
+    colors
+    */
+    
+    --rich-black-fogra-29: hsl(225, 25%, 9%);
+    --rich-black-fogra-39: hsl(170, 21%, 5%);
+    --raisin-black: hsl(228, 13%, 15%);
+    --eerie-black: hsl(207, 19%, 11%);
+    --light-gray: hsl(0, 3%, 80%);
+    --gunmetal-1: hsl(229, 15%, 21%);
+    --gunmetal-2: hsl(216, 22%, 18%);
+    --gainsboro: hsl(0, 7%, 88%);
+    --citrine: hsl(57, 97%, 45%);
+    --xiketic: hsl(253, 21%, 13%);
+    --gray-x: hsl(0, 0%, 74%);
+    --white: hsl(0, 100%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --jet: hsl(0, 0%, 20%);
+  
+    --white: hsl(0, 100%, 100%);
+      --black: hsl(0, 0%, 0%);
+      --pink: lightpink;
+      --blue: lightblue;
+      --red: crimson;
+    
+    /**  Gradient color*/
+    --gradient:linear-gradient(-90deg, rgba(255, 255, 255, 0) 25%, transparent,hsl(170, 75%, 41%)100%) ;
+    /**
+    typography
+    */
+    
+    --ff-poppins: 'Poppins', sans-serif;
+    
+    /** Font Size  */
+    --fs-1: 36px;
+    --fs-2: 32px;
+    --fs-3: 30px;
+    --fs-4: 24px;
+    --fs-5: 20px;
+    --fs-6: 18px;
+    --fs-7: 16px;
+    --fs-8: 15px;
+    --fs-9: 14px;
+    --fs-10: 13px;
+    --fs-11: 12px;
+    --fs-12: 11px;
+    
+    /** Font Weight  */
+    --fw-500: 500;
+    --fw-700: 700;
+    
+    /**
+    spacing
+    */
+    
+    --section-padding: 100px;
+    
+    /**
+    Transition
+    */
+    --transition-1: 0.15s ease;
+    --transition-2: 0.25s ease-in;
+    
+    /** Radius */
+    
+    --radius-pill: 500px;
+    --radius-circle: 50%;
+    --radius-1: 10px;
+    }
+    
+    
+  
+  
+    
+    /*-----------------------------------*\
+      #REUSED STYLE
+    \*-----------------------------------*/
+    
+    
+    
+    
+    
+    /*-----------------------------------*\
+      #HEADER
+    \*-----------------------------------*/
+    
+    
+    
+    
+    
+    /*-----------------------------------*\
+      #HERO
+    \*-----------------------------------*/
+    
+    
+    
+    
+    
+    /*-----------------------------------*\
+      header 
+    \*-----------------------------------*/
+   
+      
+    
+  
+    
+    
+    /*-----------------------------------*\
+     Body: 
+    \*-----------------------------------*/
+    
+  body {
+      
+        margin: 0;
+        background-color:rgb(156, 250, 250);
+        display: grid;
+      
+  }
+  
+    /*-----------------------------------*\
+      #Images
+    \*-----------------------------------*/
+  .ImageSlider{ 
+    display: grid;
+    padding-top: 50px;
+    transform: translate(0,0);
+    top:0;
+    left: 0;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+    position: relative;
+  
+    max-width: 100%;
+    height: 500px;
+    background-size: cover;
+  
+    padding: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-size: 100% 100%;
+   
+  
+    background-image:url(/images/study.jpg);
+    animation-name: changeImage;
+    animation-delay: 2s;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    transition: .5s ease;
+  
+  }
+  
+  
+  @keyframes changeImage{
+    0% {background-image:url(/images/study.jpg);}
+    50% {background-image:url(/images/headphone.jpg)}
+    100%{background-image:url(/images/cat.jpg)}  
+  
+  }
+  
+  
+    
+    /*-----------------------------------*\
+      #Navigation bar styles: 
+    \*------
+    /* General Navbar Styling */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(188, 124, 248);
+    padding: 10px 30px;
+    height: 70px;
+  }
+  
+  .logo {
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .logo h1 {
+    color: aqua;
+  }
+  
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    transition: height 0.5s ease;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: lightpink;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  nav ul li a:hover {
+    color: lightblue;
+  }
+  
+  .menu-icon {
+    display: none;
+    font-size: 40px;
+    color: rgb(217, 197, 235);
+    cursor: pointer;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    nav ul {
+        position: absolute;
+        top: 70px; /* Adjusted to fit below the navbar */
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: blueviolet;
+        gap: 0;
+        height: 0; /* Collapsed by default */
+        overflow: hidden;
+    }
+  
+    nav ul li {
+        padding: 14px 0;
+        text-align: center;
+    }
+  
+    .menu-icon {
+        display: block;
+    }
+  
+    #menuList.active {
+        height: 300px; /* Expanded height when active */
+    }
+  }
+  
+    
+    /*-----------------------------------*\
+      Testimonials Cards
+    \*-----------------------------------*/
+  
+  
+  /* Testimonial Section */
+  .testimonials {
+    background-color: #000;
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+  
+  .testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+  }
+  
+  .testimonials p {
+    color: #bbb;
+    margin-bottom: 2rem;
+  }
+  
+  .testimonial-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .card {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+  
+  .card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card .location {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin-bottom: 1rem;
+  }
+  
+  .card .quote {
+    font-size: 0.9rem;
+    color: #ddd;
+    line-height: 1.4;
+  }
+  
+    
+    
+    
+    
+    /*-----------------------------------*\
+      Explore Section 
+  
+    \*-----------------------------------*/
+    /* General Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+    line-height: 1.6;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Explore Section */
+  .explore {
+    margin: 2rem 0;
+    text-align: center;
+  }
+  
+  .explore h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .category {
+    background-color: #1a1a1a;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .category img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+  
+  .category p {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .category span {
+    font-size: 0.9rem;
+    color: #888;
+  }
+  
+  /* Learner Outcomes Section */
+  .learner-outcomes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    background-color: #202020;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+  }
+  
+  .images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .images img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .text-content {
+    text-align: left;
+  }
+  
+  .text-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .text-content p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+  }
+  
+  .text-content a {
+    color: #4caf50;
+    text-decoration: none;
+  }
+  
+  .text-content button {
+    padding: 0.8rem 1.5rem;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .text-content button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .learner-outcomes {
+        grid-template-columns: 1fr;
+    }
+  
+    .images {
+        grid-template-columns: 1fr;
+    }
+  }
+  
+    
+    
+    
+    
+    /*-----------------------------------*\
+      #Partners or Company 
+    \*-----------------------------------*/
+    /* Partner Section */
+  .partners {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #1a1a1a;
+    border-bottom: 1px solid #333;
+  }
+  
+  .partners p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .logos {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .logos img {
+    width: 80px;
+    height: auto;
+  }
+    
+    
+    
+    
+    
+    
+    
+    
+    /*-----------------------------------*\
+      #FOOTER
+    \*-----------------------------------*/
+    
+    .footer {
+     
+      left: 0;
+      bottom: 50px;
+      width: 100%;
+      background-color: rgb(123, 7, 255);
+      color: white;
+      text-align: center; 
+      padding-bottom: 5px;
+    }
+  
+  p{
+   padding-inline: 1px;
+   margin-inline: 2px;
+  
+   }
+  
+   .fa-brands  { 
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .Social-media-icons-white a{
+    color:white;
+    font-size: 2rem;
+  }
+  
+  .singlecol {
+    max-width: 750px;
+   margin: 0 auto;
+  }
+  
+    
+    
+    
+    /*-----------------------------------*\
+      #BACK TO TOP
+    \*-----------------------------------*/
+    
+    
+    
+    
+    
+    /*-----------------------------------*\
+      #MEDIA QUERIES
+    \*-----------------------------------*/
